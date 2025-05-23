@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="SimpleSuite" verbose="1">
+  <test name="SimpleRegression">
+    <classes>
+      <class name="testng.RestAssuredImplementation"/>
+    </classes>
+  </test>
+</suite>
