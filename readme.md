@@ -1,6 +1,6 @@
 # TestNG Program
 
-A simple Java project demonstrating the use of TestNG for unit testing.
+Tugas 1
 
 ## Features
 
