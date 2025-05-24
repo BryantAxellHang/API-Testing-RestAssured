@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-24T17:34:46 WIB" name="SimpleSuite" finished-at="2025-05-24T17:34:58 WIB" duration-ms="12194">
+    <groups>
+    </groups>
+    <test started-at="2025-05-24T17:34:46 WIB" name="SimpleRegression" finished-at="2025-05-24T17:34:58 WIB" duration-ms="12194">
+      <class name="testng.RestAssuredImplementation">
+        <test-method signature="testLoginSuccess()[pri:0, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:46 WIB" name="testLoginSuccess" finished-at="2025-05-24T17:34:52 WIB" duration-ms="6135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccess -->
+        <test-method signature="GetAllObject()[pri:2, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:52 WIB" name="GetAllObject" finished-at="2025-05-24T17:34:54 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="1406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAllObject -->
+        <test-method signature="getAllobject()[pri:3, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:54 WIB" name="getAllobject" finished-at="2025-05-24T17:34:54 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllobject -->
+        <test-method signature="addObject()[pri:4, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:54 WIB" name="addObject" finished-at="2025-05-24T17:34:55 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addObject -->
+        <test-method signature="getSingleObjectbyPath()[pri:5, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:55 WIB" name="getSingleObjectbyPath" finished-at="2025-05-24T17:34:56 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="582" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Failed to get single object]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Failed to get single object
+at testng.RestAssuredImplementation.getSingleObjectbyPath(RestAssuredImplementation.java:94)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSingleObjectbyPath -->
+        <test-method signature="testUpdateObject()[pri:6, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:56 WIB" name="testUpdateObject" finished-at="2025-05-24T17:34:56 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateObject -->
+        <test-method signature="testPartialUpdateObject()[pri:7, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:56 WIB" name="testPartialUpdateObject" finished-at="2025-05-24T17:34:57 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPartialUpdateObject -->
+        <test-method signature="testDeleteObject()[pri:8, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:57 WIB" name="testDeleteObject" finished-at="2025-05-24T17:34:57 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteObject -->
+        <test-method signature="testGetDepartments()[pri:9, instance:testng.RestAssuredImplementation@65d6b83b]" started-at="2025-05-24T17:34:57 WIB" name="testGetDepartments" finished-at="2025-05-24T17:34:58 WIB" depends-on-methods="testng.RestAssuredImplementation.testLoginSuccess" duration-ms="603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDepartments -->
+      </class> <!-- testng.RestAssuredImplementation -->
+    </test> <!-- SimpleRegression -->
+  </suite> <!-- SimpleSuite -->
+</testng-results>

@@ -84,29 +84,18 @@ public class RestAssuredImplementation{
     }
 
     @Test(priority = 5, dependsOnMethods = "testLoginSuccess")
-    public void getObjectByQuery(){
-        Response response = RestAssured.given()
-            .header("Authorization", "bearer" + token)
-            .when()
-            .get("/webhook-test/api/objects?id=3");
-
-        System.out.println("Get Object by Query "+ response.asPrettyString());
-        assert response.getStatusCode() == 200 :"Failed to get object";
-    }
-
-    @Test(priority = 6, dependsOnMethods = "testLoginSuccess")
     public void getSingleObjectbyPath(){
         Response response = RestAssured.given()
-            .header("Authorization", "bearer" + token)
+            .header("Authorization", "bearer " + token)
             .when()
-            .get("https://whitesmokehouse.com/webhook/7f40e27b-d3bf-4e21-bca1-fd9514a3e6ae/api/objects/:id");
+            .get("/webhook/api/objects?id=3");
 
         System.out.println("Get Single Object by Path: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to get single object";
 
     }
 
-    @Test(priority = 7, dependsOnMethods = "testLoginSuccess")
+    @Test(priority = 6, dependsOnMethods = "testLoginSuccess")
     public void testUpdateObject(){
         String body = "{ \"name\": \"Asus tuf gaming bry\", \"data\": { \"year\": 2021, \"price\": 3000.00, \"cpu_model\": \"i9\", \"hard_disk_size\": \"3TB\", \"capacity\": \"6 cpu\", \"screen_size\": \"15.6 Inch\", \"color\": \"White\" } }";
 
@@ -115,22 +104,50 @@ public class RestAssuredImplementation{
                 .header("Content-Type", "application/json")
                 .body(body)
                 .when()
-                .put("/webhook/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/:id");
+                .put("/webhook/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/489");
 
         System.out.println("Update Object: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to update object";
     }
 
-    @Test(priority = 8,dependsOnMethods = "testLoginSuccess")
-    public void testPartialUpdateObject(){
-        String body = "{ \"name\": \"Asus tuf gaming bry 1\", \year\": 2025\"}";
-        
+    @Test(priority = 7,dependsOnMethods = "testLoginSuccess")
+    public void testPartialUpdateObject(){        
+
+    String patchBody = "{ \"name\": \"Asus tuf gaming 123\", \"year\": \"2030\" }";
+
+    Response patchResponse = RestAssured.given()
+            .header("Authorization", "Bearer " + token)
+            .header("Content-Type", "application/json")
+            .body(patchBody)
+            .when()
+            .patch("/webhook/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/489");
+
+    System.out.println("PATCH Response: " + patchResponse.asPrettyString());
+    assert patchResponse.getStatusCode() == 200 : "Failed to patch object with ID ";
+}
+
+    @Test(priority = 8, dependsOnMethods = "testLoginSuccess")
+    public void testDeleteObject() {
         Response response = RestAssured.given()
-            .header()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .delete("/webhook/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/489");
 
+        System.out.println("Delete Object: " + response.asPrettyString());
+        assert response.getStatusCode() == 200 : "Failed to delete object";
+    }
 
+    @Test(priority = 9, dependsOnMethods = "testLoginSuccess")
+    public void testGetDepartments() {
+        Response response = RestAssured.given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .get("/webhook/api/department");
+
+        System.out.println("Get Departments: " + response.asPrettyString());
+        assert response.getStatusCode() == 200 : "Failed to get departments";
     }
-    }
+
 }
 
        
