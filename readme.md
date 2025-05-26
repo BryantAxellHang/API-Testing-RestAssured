@@ -37,9 +37,6 @@ testngprogram/
 ├── src/
 │   ├── main/
 │   └── test/
-│       ├── java/
-│       │   └── testng/
-│       │           └── RestAssuredImplementation.java
-├── pom.xml                 # Maven build configuration
-└── readme.md               # Project documentation
+├── pom.xml
+└── readme.md
 ```
