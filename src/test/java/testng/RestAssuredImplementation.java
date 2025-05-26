@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 
 public class RestAssuredImplementation{
     String token;
-
+    int createObjectId;
+   
      @Test()
     public void testLoginSuccess() {
         RestAssured.baseURI = "https://whitesmokehouse.com";
@@ -56,17 +57,6 @@ public class RestAssuredImplementation{
         assert response.jsonPath().getList("").size() > 0 : "Expected non-empty object list";
     }
 
-    @Test(priority = 3, dependsOnMethods = "testLoginSuccess")
-    public void  getAllobject(){
-        Response response = RestAssured.given()
-                .header("Authorization", "Bearer " + token)
-                .when()
-                .get("/webhook/api/objects");
-        
-        System.out.println("Get All Object: " + response.asPrettyString());
-        assert response.getStatusCode() == 200 : "Failed to get object by query ID";
-    }
-
     @Test(priority = 4, dependsOnMethods = "testLoginSuccess")
     public void addObject(){
         String body = "{ \"name\": \"Asus Tuf Gaming\", \"data\": { \"year\": 2020, \"price\": 1500.00, \"cpu_model\": \"i9\", \"hard_disk_size\": \"2TB\", \"capacity\": \"4 cpu\", \"screen_size\": \"16 Inch\", \"color\": \"Black\" } }";
@@ -78,6 +68,7 @@ public class RestAssuredImplementation{
             .when()
             .post("/webhook/api/objects");
 
+        createObjectId(response.jsonPath().getInt("id"));
         System.out.println("Add Object: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to add object";
 

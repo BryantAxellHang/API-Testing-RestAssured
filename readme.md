@@ -1,6 +1,6 @@
 # TestNG Program
 
-A simple Java project demonstrating the use of TestNG for unit testing.
+Tugas 1
 
 ## Features
 
@@ -37,6 +37,9 @@ testngprogram/
 ├── src/
 │   ├── main/
 │   └── test/
-├── pom.xml
-└── readme.md
+│       ├── java/
+│       │   └── testng/
+│       │           └── RestAssuredImplementation.java
+├── pom.xml                 # Maven build configuration
+└── readme.md               # Project documentation
 ```
