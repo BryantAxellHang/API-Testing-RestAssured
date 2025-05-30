@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-SimpleSuite" class="navigator-link">
-              <span class="suite-name border-failed">SimpleSuite</span>
+              <span class="suite-name border-passed">SimpleSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SimpleSuite" class="hide-methods failed suite-SimpleSuite"> (hide)</a> <!-- hide-methods failed suite-SimpleSuite -->
-                      <a href="#" panel-name="suite-SimpleSuite" class="show-methods failed suite-SimpleSuite"> (show)</a> <!-- show-methods failed suite-SimpleSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-SimpleSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SimpleSuite" title="testng.RestAssuredImplementation" class="method navigator-link" hash-for-method="getSingleObjectbyPath">getSingleObjectbyPath</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-SimpleSuite -->
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,7 +113,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SimpleSuite" title="testng.RestAssuredImplementation" class="method navigator-link" hash-for-method="getAllobject">getAllobject</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SimpleSuite" title="testng.RestAssuredImplementation" class="method navigator-link" hash-for-method="getSingleObjectbyID">getSingleObjectbyID</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,6 +124,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SimpleSuite" title="testng.RestAssuredImplementation" class="method navigator-link" hash-for-method="testGetDepartments">testGetDepartments</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SimpleSuite" title="testng.RestAssuredImplementation" class="method navigator-link" hash-for-method="testGetObjectByPath">testGetObjectByPath</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -167,26 +158,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SimpleSuite" class="panel SimpleSuite">
-          <div class="suite-SimpleSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testng.RestAssuredImplementation</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="getSingleObjectbyPath">
-                  </a> <!-- getSingleObjectbyPath -->
-                  <span class="method-name">getSingleObjectbyPath</span>
-                  <div class="stack-trace">java.lang.AssertionError: Failed to get single object
-	at testng.RestAssuredImplementation.getSingleObjectbyPath(RestAssuredImplementation.java:94)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SimpleSuite-class-failed -->
           <div class="suite-SimpleSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -209,9 +180,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="getAllobject">
-                  </a> <!-- getAllobject -->
-                  <span class="method-name">getAllobject</span>
+                  <a name="getSingleObjectbyID">
+                  </a> <!-- getSingleObjectbyID -->
+                  <span class="method-name">getSingleObjectbyID</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -226,6 +197,13 @@
                   <a name="testGetDepartments">
                   </a> <!-- testGetDepartments -->
                   <span class="method-name">testGetDepartments</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetObjectByPath">
+                  </a> <!-- testGetObjectByPath -->
+                  <span class="method-name">testGetObjectByPath</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -307,44 +285,44 @@ data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLoginSuccess')
 data.setCell(0, 2, 'testng.RestAssuredImplementation')
-data.setCell(0, 3, 6135);
+data.setCell(0, 3, 2181);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'GetAllObject')
 data.setCell(1, 2, 'testng.RestAssuredImplementation')
-data.setCell(1, 3, 1406);
+data.setCell(1, 3, 1186);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getAllobject')
+data.setCell(2, 1, 'addObject')
 data.setCell(2, 2, 'testng.RestAssuredImplementation')
-data.setCell(2, 3, 777);
+data.setCell(2, 3, 589);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'addObject')
+data.setCell(3, 1, 'testUpdateObject')
 data.setCell(3, 2, 'testng.RestAssuredImplementation')
-data.setCell(3, 3, 645);
+data.setCell(3, 3, 587);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testDeleteObject')
+data.setCell(4, 1, 'testGetObjectByPath')
 data.setCell(4, 2, 'testng.RestAssuredImplementation')
-data.setCell(4, 3, 640);
+data.setCell(4, 3, 576);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testUpdateObject')
+data.setCell(5, 1, 'testDeleteObject')
 data.setCell(5, 2, 'testng.RestAssuredImplementation')
-data.setCell(5, 3, 629);
+data.setCell(5, 3, 569);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testPartialUpdateObject')
+data.setCell(6, 1, 'getSingleObjectbyID')
 data.setCell(6, 2, 'testng.RestAssuredImplementation')
-data.setCell(6, 3, 628);
+data.setCell(6, 3, 556);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testGetDepartments')
+data.setCell(7, 1, 'testPartialUpdateObject')
 data.setCell(7, 2, 'testng.RestAssuredImplementation')
-data.setCell(7, 3, 603);
+data.setCell(7, 3, 551);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'getSingleObjectbyPath')
+data.setCell(8, 1, 'testGetDepartments')
 data.setCell(8, 2, 'testng.RestAssuredImplementation')
-data.setCell(8, 3, 582);
+data.setCell(8, 3, 534);
 window.suiteTableData['SimpleSuite']= { tableData: data, tableDiv: 'times-div-SimpleSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-SimpleSuite">
               </div> <!-- times-div-SimpleSuite -->
             </div> <!-- times-div -->
@@ -377,37 +355,35 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">GetAllObject</span>
-                <span class="method-start">6151 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">getAllobject</span>
-                <span class="method-start">7560 ms</span>
+                <span class="method-start">2186 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addObject</span>
-                <span class="method-start">8340 ms</span>
+                <span class="method-start">3373 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getSingleObjectbyPath</span>
-                <span class="method-start">8988 ms</span>
+                <span class="method-name">getSingleObjectbyID</span>
+                <span class="method-start">3963 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetObjectByPath</span>
+                <span class="method-start">4520 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUpdateObject</span>
-                <span class="method-start">9580 ms</span>
+                <span class="method-start">5097 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testPartialUpdateObject</span>
-                <span class="method-start">10211 ms</span>
+                <span class="method-start">5684 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDeleteObject</span>
-                <span class="method-start">10841 ms</span>
+                <span class="method-start">6236 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetDepartments</span>
-                <span class="method-start">11483 ms</span>
+                <span class="method-start">6806 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

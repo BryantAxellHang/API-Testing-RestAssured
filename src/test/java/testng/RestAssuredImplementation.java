@@ -57,7 +57,7 @@ public class RestAssuredImplementation{
         assert response.jsonPath().getList("").size() > 0 : "Expected non-empty object list";
     }
 
-    @Test(priority = 4, dependsOnMethods = "testLoginSuccess")
+    @Test(priority = 3, dependsOnMethods = "testLoginSuccess")
     public void addObject(){
         String body = "{ \"name\": \"Asus Tuf Gaming\", \"data\": { \"year\": 2020, \"price\": 1500.00, \"cpu_model\": \"i9\", \"hard_disk_size\": \"2TB\", \"capacity\": \"4 cpu\", \"screen_size\": \"16 Inch\", \"color\": \"Black\" } }";
         
@@ -68,22 +68,34 @@ public class RestAssuredImplementation{
             .when()
             .post("/webhook/api/objects");
 
-        createObjectId(response.jsonPath().getInt("id"));
+        createObjectId = response.jsonPath().getInt("id"); // 
+        System.out.println("Created object ID: " + createObjectId);
         System.out.println("Add Object: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to add object";
 
     }
 
-    @Test(priority = 5, dependsOnMethods = "testLoginSuccess")
-    public void getSingleObjectbyPath(){
+    @Test(priority = 4, dependsOnMethods = "testLoginSuccess")
+    public void getSingleObjectbyID(){
         Response response = RestAssured.given()
             .header("Authorization", "bearer " + token)
             .when()
-            .get("/webhook/api/objects?id=3");
+            .get("/webhook/api/objectslistId?id=" + createObjectId);
 
-        System.out.println("Get Single Object by Path: " + response.asPrettyString());
+        System.out.println("Get Single Object by ID: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to get single object";
 
+    }
+
+    @Test(priority = 5, dependsOnMethods = "testLoginSuccess")
+    public void testGetObjectByPath() {
+        Response response = RestAssured.given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .get("/webhook/8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/" + createObjectId);
+
+        System.out.println("Get Object by Path: " + response.asPrettyString());
+        assert response.getStatusCode() == 200 : "Failed to get object by Path";
     }
 
     @Test(priority = 6, dependsOnMethods = "testLoginSuccess")
@@ -95,7 +107,7 @@ public class RestAssuredImplementation{
                 .header("Content-Type", "application/json")
                 .body(body)
                 .when()
-                .put("/webhook/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/489");
+                .put("/webhook/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/" + createObjectId);
 
         System.out.println("Update Object: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to update object";
@@ -111,7 +123,7 @@ public class RestAssuredImplementation{
             .header("Content-Type", "application/json")
             .body(patchBody)
             .when()
-            .patch("/webhook/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/489");
+            .patch("/webhook/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/" + createObjectId);
 
     System.out.println("PATCH Response: " + patchResponse.asPrettyString());
     assert patchResponse.getStatusCode() == 200 : "Failed to patch object with ID ";
@@ -122,7 +134,7 @@ public class RestAssuredImplementation{
         Response response = RestAssured.given()
                 .header("Authorization", "Bearer " + token)
                 .when()
-                .delete("/webhook/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/489");
+                .delete("/webhook/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/" + createObjectId);
 
         System.out.println("Delete Object: " + response.asPrettyString());
         assert response.getStatusCode() == 200 : "Failed to delete object";
