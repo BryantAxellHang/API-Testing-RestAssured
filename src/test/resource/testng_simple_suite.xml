@@ -3,7 +3,7 @@
 <suite name="SimpleSuite" verbose="1">
   <test name="SimpleRegression">
     <classes>
-      <class name="testng.RestAssuredImplementation"/>
+      <class name="testng.Scenario.RestAssuredE2EPOJO"/>
     </classes>
   </test>
 </suite>

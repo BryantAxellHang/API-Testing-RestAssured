@@ -14,17 +14,17 @@ public class RestAssuredE2E {
     public void registerAndLogin() {
         RestAssured.baseURI = "https://whitesmokehouse.com";
 
-        // Unique email supaya bisa register ulang setiap kali run
-        String email = "bryantaxell31@gmail.com";
+            // Unique email supaya bisa register ulang setiap kali run
+            String email = "bryantaxell31@gmail.com";
 
         // === STEP 1: REGISTER ===
-        String registerBody = "{\n" +
-                "  \"email\": \"" + email + "\",\n" +
-                "  \"full_name\": \"Bryant Axell\",\n" +
-                "  \"password\": \"@dmin123\",\n" +
-                "  \"department\": \"Technology\",\n" +
-                "  \"phone_number\": \"088271263649\"\n" +
-                "}";
+            String registerBody = "{\n" +
+                    "  \"email\": \"" + email + "\",\n" +
+                    "  \"full_name\": \"Bryant Axell\",\n" +
+                    "  \"password\": \"@dmin123\",\n" +
+                    "  \"department\": \"Technology\",\n" +
+                    "  \"phone_number\": \"088271263649\"\n" +
+                    "}";
 
         Response registerResponse = RestAssured.given()
                 .header("Content-Type", "application/json")

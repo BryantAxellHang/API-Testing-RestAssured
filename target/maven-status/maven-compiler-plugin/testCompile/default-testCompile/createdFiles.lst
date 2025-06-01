@@ -1,1 +1,3 @@
+testng\Scenario\RestAssuredE2E.class
 testng\RestAssuredImplementation.class
+testng\Scenario\RestAssuredE2EPOJO.class

@@ -1,1 +1,7 @@
+testngprogram\model\Data.class
+testngprogram\model\ObjectRequest.class
+model\ObjectUpdateRequest$Data.class
+model\LoginRequest.class
 testngprogram\Main.class
+model\ObjectUpdateRequest.class
+model\RegisterRequest.class
