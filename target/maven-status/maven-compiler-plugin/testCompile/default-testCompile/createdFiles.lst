@@ -1,3 +1,5 @@
-testng\Scenario\RestAssuredE2E.class
 testng\RestAssuredImplementation.class
 testng\Scenario\RestAssuredE2EPOJO.class
+testng\runner\TestRunner.class
+testng\Scenario\RestAssuredE2E.class
+stepdefinitions\LoginStepDefinition.class
