@@ -1,5 +1,6 @@
 testng\RestAssuredImplementation.class
+stepdefinitions\StepDefinition.class
 testng\Scenario\RestAssuredE2EPOJO.class
 testng\runner\TestRunner.class
 testng\Scenario\RestAssuredE2E.class
-stepdefinitions\LoginStepDefinition.class
+selenium\locator\SeleniumIntroductionTest.class

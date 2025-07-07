@@ -1,9 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-
 <suite name="SimpleSuite" verbose="1">
   <test name="SimpleRegression">
     <classes>
-      <class name="testng.Scenario.RestAssuredE2EPOJO"/>
+      <class name="selenium.locator.SeleniumIntroductionTest"/>
     </classes>
   </test>
 </suite>
