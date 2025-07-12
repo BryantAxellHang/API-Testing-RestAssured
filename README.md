@@ -1,45 +1,52 @@
-# TestNG Program
+# 🧪 Tugas Akhir: Automation Testing Saucedemo.com
 
-Tugas 1
+Proyek ini merupakan tugas akhir Automation Testing yang menggunakan kombinasi **Selenium WebDriver**, **Cucumber**, dan **Page Object Model (POM)** untuk menguji situs web [Saucedemo.com](https://www.saucedemo.com/).
 
-## Features
+## 📚 Teknologi yang Digunakan
 
-- Example TestNG test cases
-- Easy to run and extend
-
-## Getting Started
-
-1. **Clone the repository:**
-
-   ```sh
-   git clone https://github.com/yourusername/testngprogram.git
-   cd testngprogram
-   ```
-
-2. **Import into your IDE** (e.g., IntelliJ IDEA, Eclipse).
-
-3. **Build and run tests:**
-   - Using Maven:
-     ```sh
-     mvn test
-     ```
-   - Or run tests directly from your IDE.
-
-## Requirements
-
-- Java 8 or higher
+- Java 17+
+- Maven
+- Selenium WebDriver
+- Cucumber (BDD)
 - TestNG
+- Page Object Model (POM)
+- ChromeDriver (Headless/Non-headless)
 
-## Project Structure
+## 🧩 Struktur Proyek
 
-```
-testngprogram/
-├── src/
-│   ├── main/
-│   └── test/
-│       ├── java/
-│       │   └── testng/
-│       │           └── RestAssuredImplementation.java
-├── pom.xml                 # Maven build configuration
-└── readme.md               # Project documentation
-```
+src/
+├── main/
+│ └── java/
+│ └── pages/ # Kumpulan Page Object (class)
+│ └── SauceDemoPage.java
+├── test/
+│ ├── java/
+│ │ ├── runner/ # Runner class untuk Cucumber
+│ │ │ └── TestRunner.java
+│ │ └── stepdefinitions/ # Step Definitions
+│ │ └── StepDefinitionsSln.java
+│ └── resources/
+│ └── features/ # Feature files Gherkin
+│ └── loginselenium.feature
+
+## ✅ Fitur yang Diuji
+
+Berikut skenario yang sudah diimplementasikan dan diuji:
+
+- 🔐 Login:
+
+  - Login berhasil dengan kredensial valid
+  - Login gagal dengan kredensial tidak valid
+
+- 🛒 Checkout:
+
+  - Menambahkan produk ke keranjang
+  - Checkout berhasil dengan data lengkap
+  - Validasi error saat field kosong (first name / postal code)
+
+- 🔁 Logout:
+
+  - Logout dari halaman inventori
+
+- ❌ Remove Product:
+  - Menghapus produk dari keranjang
