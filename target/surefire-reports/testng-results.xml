@@ -1,81 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-07T20:44:44 WIB" name="SimpleSuite" finished-at="2025-07-07T20:45:00 WIB" duration-ms="16285">
+  <suite started-at="2025-07-12T17:02:31 WIB" name="Surefire suite" finished-at="2025-07-12T17:02:48 WIB" duration-ms="17224">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-07T20:44:44 WIB" name="SimpleRegression" finished-at="2025-07-07T20:45:00 WIB" duration-ms="16285">
-      <class name="selenium.locator.SeleniumIntroductionTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:44 WIB" name="setup" finished-at="2025-07-07T20:44:45 WIB" duration-ms="951" status="PASS">
+    <test started-at="2025-07-12T17:02:31 WIB" name="Surefire test" finished-at="2025-07-12T17:02:48 WIB" duration-ms="17224">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:31 WIB" name="setUpClass" finished-at="2025-07-12T17:02:31 WIB" duration-ms="317" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@10177794]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="login()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:45 WIB" name="login" finished-at="2025-07-07T20:44:45 WIB" duration-ms="409" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:31 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:34 WIB" duration-ms="2749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="cekDetailProdukTest()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:45 WIB" name="cekDetailProdukTest" finished-at="2025-07-07T20:44:45 WIB" duration-ms="288" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:34 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:36 WIB" duration-ms="2049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cekDetailProdukTest -->
-        <test-method is-config="true" signature="logoutIfNeeded()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:45 WIB" name="logoutIfNeeded" finished-at="2025-07-07T20:44:45 WIB" duration-ms="9" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:36 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:38 WIB" duration-ms="2484" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful checkout flow"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutIfNeeded -->
-        <test-method is-config="true" signature="login()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:45 WIB" name="login" finished-at="2025-07-07T20:44:45 WIB" duration-ms="45" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:38 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:41 WIB" duration-ms="2640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful logout from inventory page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="fullCheckoutFlow()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:45 WIB" name="fullCheckoutFlow" finished-at="2025-07-07T20:44:46 WIB" duration-ms="456" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:41 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:43 WIB" duration-ms="2204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove product from the cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fullCheckoutFlow -->
-        <test-method is-config="true" signature="logoutIfNeeded()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:46 WIB" name="logoutIfNeeded" finished-at="2025-07-07T20:44:47 WIB" duration-ms="1085" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:43 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:45 WIB" duration-ms="2346" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checkout with missing first name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutIfNeeded -->
-        <test-method is-config="true" signature="login()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:47 WIB" name="login" finished-at="2025-07-07T20:44:47 WIB" duration-ms="22" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:45 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-12T17:02:48 WIB" duration-ms="2388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checkout with missing postal code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Saucedemo Login and Checkout Flow"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="hapusDariKeranjangTest()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:47 WIB" name="hapusDariKeranjangTest" finished-at="2025-07-07T20:44:57 WIB" duration-ms="10265" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@43301423]" started-at="2025-07-12T17:02:48 WIB" name="tearDownClass" finished-at="2025-07-12T17:02:48 WIB" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hapusDariKeranjangTest -->
-        <test-method is-config="true" signature="logoutIfNeeded()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:57 WIB" name="logoutIfNeeded" finished-at="2025-07-07T20:44:58 WIB" duration-ms="1087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutIfNeeded -->
-        <test-method is-config="true" signature="login()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:58 WIB" name="login" finished-at="2025-07-07T20:44:58 WIB" duration-ms="28" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="loginGagalTest()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:58 WIB" name="loginGagalTest" finished-at="2025-07-07T20:44:58 WIB" duration-ms="131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginGagalTest -->
-        <test-method is-config="true" signature="logoutIfNeeded()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:58 WIB" name="logoutIfNeeded" finished-at="2025-07-07T20:44:58 WIB" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutIfNeeded -->
-        <test-method is-config="true" signature="login()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:58 WIB" name="login" finished-at="2025-07-07T20:44:58 WIB" duration-ms="27" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="tambahBeberapaProdukKeKeranjangTest()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:58 WIB" name="tambahBeberapaProdukKeKeranjangTest" finished-at="2025-07-07T20:44:59 WIB" duration-ms="203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tambahBeberapaProdukKeKeranjangTest -->
-        <test-method is-config="true" signature="logoutIfNeeded()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:44:59 WIB" name="logoutIfNeeded" finished-at="2025-07-07T20:45:00 WIB" duration-ms="1074" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutIfNeeded -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:selenium.locator.SeleniumIntroductionTest@31d7b7bf]" started-at="2025-07-07T20:45:00 WIB" name="tearDown" finished-at="2025-07-07T20:45:00 WIB" duration-ms="164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- selenium.locator.SeleniumIntroductionTest -->
-    </test> <!-- SimpleRegression -->
-  </suite> <!-- SimpleSuite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>

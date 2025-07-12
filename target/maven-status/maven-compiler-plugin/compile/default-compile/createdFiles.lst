@@ -1,3 +1,4 @@
+pages\SauceDemoPage.class
 testngprogram\model\Data.class
 testngprogram\model\ObjectRequest.class
 model\ObjectUpdateRequest$Data.class
